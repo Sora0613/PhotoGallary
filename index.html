@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>卒業展示ギャラリー</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>卒業展示ギャラリー</h1>
+    <p>ここに自己紹介や展示の趣旨を記述してください。</p>
+  </header>
+
+  <div class="gallery">
+    <div class="gallery-item" onclick="showOverlay('image1.jpg', '作品タイトル1', 'カメラ: Canon EOS 5D, レンズ: EF 50mm', 'ISO: 100, SS: 1/125, F値: 2.8')">
+      <img src="/images/image1.jpg" alt="写真1">
+      <div class="title">作品タイトル1</div>
+    </div>
+    <div class="gallery-item" onclick="showOverlay('image2.jpg', '作品タイトル2', 'カメラ: Nikon D850, レンズ: 24-70mm', 'ISO: 200, SS: 1/60, F値: 4.0')">
+      <img src="/images/image2.jpg" alt="写真2">
+      <div class="title">作品タイトル2</div>
+    </div>
+    <div class="gallery-item" onclick="showOverlay('image3.jpg', '作品タイトル3', 'カメラ: Sony A7III, レンズ: 35mm', 'ISO: 400, SS: 1/500, F値: 1.8')">
+      <img src="/images/image3.jpg" alt="写真3">
+      <div class="title">作品タイトル3</div>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay" onclick="hideOverlay(event)">
+    <span class="close-btn" onclick="hideOverlay(event)">&times;</span>
+    <div class="overlay-content">
+      <img id="overlay-img" src="" alt="拡大表示">
+      <div class="details" id="overlay-details"></div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
