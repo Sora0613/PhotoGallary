@@ -20,3 +20,11 @@ function hideOverlay(event) {
     overlay.style.display = 'none';
   }
 }
+
+// ナイトモード切り替え
+const toggleSwitch = document.getElementById('toggle-night-mode');
+toggleSwitch.addEventListener('change', () => {
+  document.body.classList.toggle('night-mode');
+  const header = document.querySelector('header');
+  header.classList.toggle('night-mode');
+});
