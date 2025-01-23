@@ -1,40 +1,164 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>卒業展示ギャラリー</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卒業展示ギャラリー</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
+<header>
     <h1>卒業展示ギャラリー</h1>
-    <p>展示の内容や自己紹介を書きたい。</p>
-  </header>
+    <p>大学生活の間に撮った写真をハイライト的にまとめました。</p>
+    <p>※全ての写真を圧縮せずに表示しているため読み込みに時間がかかる場合があります。</p>
+    <div class="toggle-switch">
+        <input type="checkbox" id="toggle-night-mode">
+        <label for="toggle-night-mode"></label>
+        <span>ナイトモード</span>
+    </div>
+</header>
 
-  <div class="gallery">
-    <div class="gallery-item" onclick="showOverlay('image1.jpg', '作品タイトル1', 'カメラ: Canon EOS 5D, レンズ: EF 50mm', 'ISO: 100, SS: 1/125, F値: 2.8')">
-      <img src="images/image1.jpg" alt="写真1">
-      <div class="title">作品タイトル1</div>
+<div class="gallery">
+    <div class="gallery-item"
+         onclick="showOverlay('images/image1.JPG', '大阪夜景', 'カメラ: Sony α7 iii', 'ISO: 50, SS: 20sec, F値: 8')">
+        <img src="images/image1.JPG" alt="写真1">
+        <div class="title">大阪夜景</div>
     </div>
-    <div class="gallery-item" onclick="showOverlay('image2.jpg', '作品タイトル2', 'カメラ: Nikon D850, レンズ: 24-70mm', 'ISO: 200, SS: 1/60, F値: 4.0')">
-      <img src="images/image2.jpg" alt="写真2">
-      <div class="title">作品タイトル2</div>
+    <div class="gallery-item"
+         onclick="showOverlay('images/image2.JPG', '海に近い駅', 'カメラ: Sony α7 iii', 'ISO: 100, SS: 1/800, F値: 4.5')">
+        <img src="images/image2.JPG" alt="写真2">
+        <div class="title">海に近い駅</div>
     </div>
-    <div class="gallery-item" onclick="showOverlay('image3.jpg', '作品タイトル3', 'カメラ: Sony A7III, レンズ: 35mm', 'ISO: 400, SS: 1/500, F値: 1.8')">
-      <img src="images/image3.jpg" alt="写真3">
-      <div class="title">作品タイトル3</div>
+    <div class="gallery-item"
+         onclick="showOverlay('images/image3.JPG', '海に近い駅2', 'カメラ: Sony α7 iii', 'ISO: 100, SS: 1/125, F値: 2.8')">
+        <img src="images/image3.JPG" alt="写真3">
+        <div class="title">海に近い駅2</div>
     </div>
-  </div>
+    <div class="gallery-item"
+         onclick="showOverlay('images/image4.JPG', '曼珠沙華', 'カメラ: Sony α7 iii', 'ISO: 6400, SS: 1/15, F値: 5.6')">
+        <img src="images/image4.JPG" alt="写真4">
+        <div class="title">曼珠沙華</div>
+    </div>
+    <div class="gallery-item"
+         onclick="showOverlay('images/image5.JPG', 'マヌルネコ', 'カメラ: Sony α7 iii', 'ISO: 1000, SS: 1/250, F値: 4.5')">
+        <img src="images/image5.JPG" alt="写真5">
+        <div class="title">マヌルネコ</div>
+    </div>
+    <div class="gallery-item"
+         onclick="showOverlay('images/image6.JPG', 'シンリンオオカミ', 'カメラ: Sony α7 iii', 'ISO: 320, SS: 1/400, F値: 5.6')">
+        <img src="images/image6.JPG" alt="写真6">
+        <div class="title">シンリンオオカミ</div>
+    </div>
+    <div class="gallery-item"
+         onclick="showOverlay('images/image7.JPG', 'City Walker', 'カメラ: Sony α7 iii', 'ISO: 1250, SS: 1/40, F値: 5.6')">
+        <img src="images/image7.JPG" alt="写真7">
+        <div class="title">City Walker</div>
+    </div>
+    <div class="gallery-item"
+         onclick="showOverlay('images/image8.JPG', '朝焼け', 'カメラ: Sony α7 iii', 'ISO: 100, SS: 1/250, F値: 8')">
+        <img src="images/image8.JPG" alt="写真8">
+        <div class="title">朝焼け</div>
+    </div>
+    <div class="gallery-item"
+         onclick="showOverlay('images/image9.JPG', '悠悠閑閑', 'カメラ: Sony α7 iii', 'ISO: 640, SS: 1/250, F値: 5.6')">
+        <img src="images/image9.JPG" alt="写真9">
+        <div class="title">悠悠閑閑</div>
+    </div>
+    <div class="gallery-item"
+         onclick="showOverlay('images/image10.JPG', 'のびるのびる', 'カメラ: Sony α7 iii', 'ISO: 1000, SS: 1/250, F値: 5.6')">
+        <img src="images/image10.JPG" alt="写真10">
+        <div class="title">のびるのびる</div>
+    </div>
+    <div class="gallery-item"
+         onclick="showOverlay('images/image11.JPG', '覗く。夏空。', 'カメラ: Sony α7 iii', 'ISO: 100, SS: 1/2000, F値: 4.5')">
+        <img src="images/image11.JPG" alt="写真11">
+        <div class="title">覗く。夏空。</div>
+    </div>
+    <div class="gallery-item"
+         onclick="showOverlay('images/image13.JPG', '光合成してます。', 'カメラ: Sony α7 iii', 'ISO: 100, SS: 1/320, F値: 11')">
+        <img src="images/image13.JPG" alt="写真13">
+        <div class="title">光合成してます</div>
+    </div>
+    <div class="gallery-item"
+         onclick="showOverlay('images/image14.JPG', 'たばこ屋さん', 'カメラ: Sony α7 iii', 'ISO: 400, SS: 1/30, F値: 4')">
+        <img src="images/image14.JPG" alt="写真14">
+        <div class="title">たばこ屋さん</div>
+    </div>
+    <div class="gallery-item"
+         onclick="showOverlay('images/image15.JPG', '風格', 'カメラ: Sony α7 iii', 'ISO: 1250, SS: 1/250, F値: 4')">
+        <img src="images/image15.JPG" alt="写真15">
+        <div class="title">風格</div>
+    </div>
+    <div class="gallery-item"
+         onclick="showOverlay('images/image16.JPG', '春の訪れ', 'カメラ: Sony α7 iii', 'ISO: 100, SS: 1/800, F値: 5.6')">
+        <img src="images/image16.JPG" alt="写真16">
+        <div class="title">春の訪れ</div>
+    </div>
+    <div class="gallery-item"
+         onclick="showOverlay('images/image17.JPG', '春の訪れ', 'カメラ: Sony α7 iii', 'ISO: 100, SS: 1/640, F値: 5.6')">
+        <img src="images/image17.JPG" alt="写真17">
+        <div class="title">春の訪れ</div>
+    </div>
+    <div class="gallery-item"
+         onclick="showOverlay('images/image18.JPG', '『桜は賢いよね。飽きられる前に散るんだから』', 'カメラ: Sony α7 iii', 'ISO: 100, SS: 1/2500, F値: 5')">
+        <img src="images/image18.JPG" alt="写真18">
+        <div class="title">賢い桜</div>
+    </div>
+    <div class="gallery-item"
+         onclick="showOverlay('images/image19.JPG', '部活終わり', 'カメラ: Sony α7 iii', 'ISO: 160, SS: 1/250, F値: 5.6')">
+        <img src="images/image19.JPG" alt="写真19">
+        <div class="title">部活終わり。</div>
+    </div>
+    <div class="gallery-item"
+         onclick="showOverlay('images/image20.JPG', '邂逅', 'カメラ: Sony α7 iii', 'ISO: 500, SS: 1/250, F値: 5.6')">
+        <img src="images/image20.JPG" alt="写真20">
+        <div class="title">邂逅</div>
+    </div>
+    <div class="gallery-item"
+         onclick="showOverlay('images/image21.JPG', 'Meteors', 'カメラ: Sony α7 iii', 'ISO: 800, SS: 15sec, F値: 2.8')">
+        <img src="images/image21.JPG" alt="写真21">
+        <div class="title">Meteors</div>
+    </div>
+    <div class="gallery-item"
+         onclick="showOverlay('images/image22.JPG', 'ぐねぐね', 'カメラ: Sony α7 iii', 'ISO: 100, SS: 1/400, F値: 5.6')">
+        <img src="images/image22.JPG" alt="写真22">
+        <div class="title">ぐねぐね</div>
+    </div>
+    <div class="gallery-item"
+         onclick="showOverlay('images/image23.JPG', '友達と大自然を満喫しました。', 'カメラ: Sony α7 iii', 'ISO: 50, SS: 1/320, F値: 8')">
+        <img src="images/image23.JPG" alt="写真23">
+        <div class="title">大自然を満喫</div>
+    </div>
+    <div class="gallery-item"
+         onclick="showOverlay('images/image24.JPG', '荒波', 'カメラ: Sony α7 iii', 'ISO: 50, SS: 1/125, F値: 8')">
+        <img src="images/image24.JPG" alt="写真24">
+        <div class="title">荒波</div>
+    </div>
+    <div class="gallery-item"
+         onclick="showOverlay('images/image25.JPG', 'ストリートスナップ？' , 'カメラ: Sony α7 iii', 'ISO: 500, SS: 1/250, F値: 8')">
+        <img src="images/image25.JPG" alt="写真25">
+        <div class="title">ストリートスナップ？</div>
+    </div>
+    <div class="gallery-item"
+         onclick="showOverlay('images/image26.JPG', '韓国 交通量 多過ぎ [検索]', 'カメラ: Sony α7 iii', 'ISO: 6400, SS: 1/50, F値: 8')">
+        <img src="images/image26.JPG" alt="写真26">
+        <div class="title">韓国旅行</div>
+    </div>
+    <div class="gallery-item"
+         onclick="showOverlay('images/image27.JPG', 'おもろい友達です。', 'カメラ: Sony α7 iii', 'ISO: 6400, SS: 1/40, F値: 8')">
+        <img src="images/image27.JPG" alt="写真27">
+        <div class="title">Just Arrived At Korea</div>
+    </div>
+</div>
 
-  <div class="overlay" id="overlay" onclick="hideOverlay(event)">
+<div class="overlay" id="overlay" onclick="hideOverlay(event)">
     <span class="close-btn" onclick="hideOverlay(event)">&times;</span>
     <div class="overlay-content">
-      <img id="overlay-img" src="" alt="拡大表示">
-      <div class="details" id="overlay-details"></div>
+        <img id="overlay-img" src="" alt="拡大表示">
+        <div class="details" id="overlay-details"></div>
     </div>
-  </div>
+</div>
 
-  <script src="scripts.js"></script>
+<script src="scripts.js"></script>
 </body>
 </html>
